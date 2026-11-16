@@ -1,86 +1,145 @@
-# Tariq Ziad — Personal Portfolio
+# Alex Morgan Portfolio
 
-A premium editorial portfolio built with **only HTML, CSS and vanilla JavaScript**. No frameworks, no build step, no dependencies (apart from the Google Fonts stylesheet).
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Responsive-Design-0A0A0A?style=for-the-badge" alt="Responsive design" />
+  <img src="https://img.shields.io/badge/Status-Portfolio%20Template-4CAF50?style=for-the-badge" alt="Portfolio template" />
+</p>
 
-**To view it:** open `index.html` in any modern browser — or serve the folder with any static host.
+A premium personal portfolio website built with HTML, CSS, and vanilla JavaScript. The project is designed to present creative work, brand identity, web design, motion, and digital storytelling in a modern editorial layout.
 
-All names, bios, projects and contact details are **fictional placeholders**.
+## Preview
 
----
+Open the site directly in a browser:
 
-## Project structure
-
-```
-alex-morgan-portfolio/
-├── index.html              Page structure, SEO + Open Graph metadata, hero artwork (inline SVG)
-├── README.md               This file
-├── css/
-│   └── style.css           Design tokens, layout, animations, dark mode, responsive, reduced-motion
-├── js/
-│   ├── content.js          ★ ALL personal content lives here — edit this file
-│   ├── art.js              Generative project covers + icon set (SVG)
-│   └── script.js           Rendering + every interaction
-└── assets/
-    └── images/
-        ├── portrait.svg    Placeholder portrait — replace with your photo
-        ├── favicon.svg     Browser-tab icon
-        └── og-cover.png    1200×630 social-share image
+```bash
+index.html
 ```
 
----
+Or run a local web server:
 
-## Making it yours
-
-### 1. Edit `js/content.js` (almost everything)
-| Section | What to change |
-|---|---|
-| `person` | name, role, city, timezone (drives the live clock), email, phone, portrait path, CV path |
-| `hero` | headline lines (wrap a word in `*stars*` for the italic accent), intro, CTA labels, marquee words |
-| `about` | statement, story paragraphs, mission, vision, values, toolkit, languages |
-| `services` | title, text, tags, icon (`brand`, `web`, `motion`, `art`, `photo`) |
-| `projects` | title, category, year, role, tools, summary, details, **cover style + palette** or your own `image` |
-| `experience` | roles, studios, years |
-| `process`, `testimonials` | steps and quotes (the testimonials are samples — replace with real ones before publishing) |
-| `contact`, `socials` | heading, text, form endpoint, social URLs |
-
-The "At a glance" numbers on the About section are **calculated from your content** (project count, services, skills, languages), so they can never be out of date or invented.
-
-### 2. Use real project images
-In any project, set `image: "assets/images/projects/my-project.jpg"`. It replaces the generated cover everywhere (grid, list preview, modal). Without an image, a cover is drawn from the project's `style` (`arches`, `dunes`, `rings`, `lines`, `blocks`, `burst`, `halftone`, `type`) and `palette`.
-
-### 3. Use your own photo
-Save it as `assets/images/portrait.jpg` and set `portrait: "assets/images/portrait.jpg"` in `content.js`. A 3:4 portrait works best.
-
-### 4. Also update in `index.html`
-Search engines and social platforms read the static HTML, so change these once:
-- `<title>`, `meta name="description"`, `meta name="author"`
-- the `og:` and `twitter:` tags (use full `https://…` URLs for `og:image` once deployed)
-- the JSON-LD `Person` block in `<head>`
-- the `aria-label` on the logo link (it names "Tariq Ziad")
-
-### 5. Make the contact form send real messages
-The form validates and shows a success state, but **it does not send anything on its own**. While `contact.formEndpoint` is empty, the success message says so honestly and offers a button to send the message from the visitor's email app.
-
-To receive messages, create a form on a service such as Formspree or Basin and paste its URL:
-```js
-contact: { formEndpoint: "https://formspree.io/f/your-id", … }
+```bash
+python -m http.server 8000
 ```
 
----
+Then visit:
+
+```text
+http://localhost:8000
+```
 
 ## Features
-- Animated loader, staggered hero entrance, mouse-parallax mountain scene
-- Sticky glass header with a sliding active-section indicator and scroll-progress bar
-- Full-screen mobile menu (focus-managed, `Esc` to close)
-- Light / dark theme (remembers choice, follows system preference)
-- Scroll-reveal animations, scroll-lit statement text, animated counters
-- Project gallery: category filtering with FLIP animation, grid ↔ list views, floating image preview
-- Project modal: keyboard navigation (← → Esc), prev/next, "start a similar project" prefills the form
-- Draggable, keyboard-accessible testimonial slider
-- Accessible form validation with inline errors and a honeypot field
-- Copy-email button, live local-time clock, back-to-top with progress ring
-- Custom cursor and magnetic buttons (fine-pointer devices only)
-- Respects `prefers-reduced-motion`; works at 320 px → 4K with no horizontal scroll
 
-## Colours & type
-Design tokens are CSS variables at the top of `css/style.css` (`--bg`, `--ink`, `--accent`, `--saffron`, `--pine` …). Fonts: **Fraunces** (display), **Hanken Grotesk** (text), **JetBrains Mono** (labels), loaded from Google Fonts with sensible system fallbacks if offline.
+- Premium editorial-style portfolio layout
+- Fully responsive design for mobile, tablet, and desktop
+- Dark and light theme support
+- Smooth scrolling and subtle motion effects
+- Interactive project filtering and modal gallery
+- Custom SVG illustrations and branded visual system
+- Accessible navigation and mobile menu behavior
+- Contact form UX with validation and email fallback
+- No framework or build dependency required
+
+## Project Structure
+
+```text
+alex-morgan-portfolio/
+├── index.html              # Main page structure and meta tags
+├── README.md               # Project documentation
+├── css/
+│   └── style.css           # Styles, theme system, and responsive layout
+├── js/
+│   ├── content.js          # Personal info, portfolio content, projects, services
+│   ├── art.js              # Generative artwork and SVG visuals
+│   └── script.js           # Rendering logic and interactivity
+├── assets/
+│   └── images/
+│       ├── portrait.svg    # Placeholder portrait image
+│       ├── favicon.svg     # Browser tab icon
+│       ├── og-cover.png    # Social share image
+│       └── ...
+└── ...
+```
+
+## Quick Start
+
+1. Clone the repository
+2. Open `index.html` in your browser, or run a local server
+3. Edit the content in `js/content.js`
+4. Replace placeholder assets in `assets/images/`
+5. Update SEO metadata in `index.html`
+
+## Customization
+
+### Personal details
+Edit `js/content.js` to update:
+
+- Name and title
+- Email, phone, city, and location
+- Hero text and call-to-action buttons
+- About section and mission statement
+- Services, projects, and testimonials
+- Social profiles and contact links
+
+### Replace placeholder media
+Update these files with your own branding assets:
+
+- `assets/images/portrait.svg`
+- `assets/images/favicon.svg`
+- `assets/images/og-cover.png`
+
+### SEO and social tags
+Customize the metadata in `index.html`:
+
+- Page title
+- Meta description
+- Open Graph tags
+- Twitter card settings
+- JSON-LD structured data
+
+## Deployment
+
+This is a static portfolio, so it can be deployed easily to:
+
+- GitHub Pages
+- Netlify
+- Vercel
+- Any static hosting provider
+
+Example for GitHub Pages:
+
+```bash
+git add .
+git commit -m "Initial portfolio release"
+git push origin main
+```
+
+Then enable GitHub Pages in your repository settings.
+
+## Notes
+
+This project currently uses demo or placeholder content. Before publishing, replace the sample text, images, and portfolio entries with your real work and contact information.
+
+## Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+- SVG graphics
+- Google Fonts
+
+## License
+
+This project is provided for personal or portfolio use. You are free to adapt it for your own website or portfolio project.
+
+## Contact
+
+For questions or collaboration opportunities, update the contact information inside `js/content.js` and ensure the form is connected to your preferred service such as Formspree, Basin, or your own backend endpoint.
+
+---
+
+<p align="center">
+  <strong>Built for showcasing creative work and personal branding.</strong>
+</p>
