@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-label="Portrait placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6d9a2"/><stop offset=".55" stop-color="#f0a95a"/><stop offset="1" stop-color="#e4421a"/></linearGradient>
+    <linearGradient id="coat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f4a3d"/><stop offset="1" stop-color="#0e1512"/></linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  <circle cx="300" cy="330" r="190" fill="#fff3d1" opacity=".55"/>
+  <circle cx="300" cy="330" r="128" fill="#fff3d1"/>
+  <!-- shoulders -->
+  <path d="M60 800v-120c0-84 70-146 160-164l80 36 80-36c90 18 160 80 160 164v120z" fill="url(#coat)"/>
+  <!-- neck -->
+  <path d="M262 470h76v70c-14 18-62 18-76 0z" fill="#c98a63"/>
+  <!-- head -->
+  <ellipse cx="300" cy="372" rx="84" ry="102" fill="#d9a07a"/>
+  <!-- hair -->
+  <path d="M214 362c-8-96 40-152 100-152 66 0 100 58 84 150-14-46-40-72-82-76-44 2-76 26-102 78z" fill="#1a1411"/>
+  <!-- collar -->
+  <path d="M232 520l68 60 68-60-24-20-44 28-44-28z" fill="#f3eee4"/>
+</svg>
